@@ -5,7 +5,8 @@
 
 # Features
 
-✅ Well Structured Code Approach. \
+✅ Well Structured Coding Approach for FastAPI project. \
+✅ E-Commerce Store Endpoints: Sales, Inventory, Products, Categories.\
 ✅ Relational Database: Postgres\
 ✅ Local dockerized db.\
 ✅ Dockerized PgAdmin to check the db records.\
