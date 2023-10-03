@@ -20,7 +20,8 @@
 - Alembic: For Database Migrations.
 - SQLAlchemy: For ORM.
 - Pydantic: For Typing or Serialization.
-- Poetry: Python dependency management and packaging made easy. (Better than pip)
+- Pytest: For test cases.
+- Poetry: Python dependency management and packaging made easy.
 - Docker & docker-compose : For Virtualization.
 - PostgresSQL: Database.
 - PgAdmin 4: To interact with the Postgres database sessions.
