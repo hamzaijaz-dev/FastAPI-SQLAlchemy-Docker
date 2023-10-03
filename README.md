@@ -57,3 +57,7 @@ The e-commerce admin dashboard application is up & running.
 - PgAdmin on `localhost:5050`
 
 <img src="https://github.com/hamzaijaz-dev/FastAPI-SQLAlchemy-Docker/blob/main/images/docs.png" alt="FastAPI SQLAlchemy Docker">
+
+# Database Schema
+<img src="https://github.com/hamzaijaz-dev/FastAPI-SQLAlchemy-Docker/blob/main/images/DB-Schema.png" alt="FastAPI SQLAlchemy Docker">
+
