@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi_sqlalchemy import DBSessionMiddleware
 
+from app.core.db.seeder import seed_items
 from app.core.logger import init_logging
 from app.ecommerce.v1 import ecommerce_router
 
@@ -13,7 +14,12 @@ app = FastAPI(title="E-Commerce Admin Dashboard APIs")
 app.add_middleware(DBSessionMiddleware, db_url=os.environ["DATABASE_URL"])
 app.include_router(ecommerce_router)
 
-init_logging()
+
+@app.on_event("startup")
+async def startup_event():
+    seed_items()
+    init_logging()
+
 
 if __name__ == "__main__":
     import uvicorn
