@@ -15,20 +15,32 @@ def seed_items():
             session.add(category2)
 
             # Seed Products
-            product1 = Product(name="Product 1", sku="SKU1", description="Description 1", price=10.99, categories=category1)
-            product2 = Product(name="Product 2", sku="SKU2", description="Description 2", price=15.99, categories=category2)
+            product1 = Product(
+                name="Product 1", sku="SKU1", description="Description 1", price=10.99, categories=category1
+            )
+            product2 = Product(
+                name="Product 2", sku="SKU2", description="Description 2", price=15.99, categories=category2
+            )
             session.add(product1)
             session.add(product2)
 
             # Seed Inventory
-            inventory1 = Inventory(initial_quantity=100, remaining_quantity=100, threshold=10, products=product1)
-            inventory2 = Inventory(initial_quantity=200, remaining_quantity=200, threshold=20, products=product2)
+            inventory1 = Inventory(
+                initial_quantity=100, remaining_quantity=100, threshold=10, products=product1
+            )
+            inventory2 = Inventory(
+                initial_quantity=200, remaining_quantity=200, threshold=20, products=product2
+            )
             session.add(inventory1)
             session.add(inventory2)
 
             # Seed Customers
-            customer1 = Customer(name="Customer 1", email="customer1@example.com", phone="1234567890", address="Address 1")
-            customer2 = Customer(name="Customer 2", email="customer2@example.com", phone="9876543210", address="Address 2")
+            customer1 = Customer(
+                name="Customer 1", email="customer1@example.com", phone="1234567890", address="Address 1"
+            )
+            customer2 = Customer(
+                name="Customer 2", email="customer2@example.com", phone="9876543210", address="Address 2"
+            )
             session.add(customer1)
             session.add(customer2)
 
@@ -45,8 +57,12 @@ def seed_items():
             session.add(order_item2)
 
             # Seed Inventory Change History
-            inventory_change_history1 = InventoryChangeHistory(quantity_change=10, new_quantity=110, product=product1)
-            inventory_change_history2 = InventoryChangeHistory(quantity_change=5, new_quantity=205, product=product2)
+            inventory_change_history1 = InventoryChangeHistory(
+                quantity_change=10, new_quantity=110, product=product1
+            )
+            inventory_change_history2 = InventoryChangeHistory(
+                quantity_change=5, new_quantity=205, product=product2
+            )
             session.add(inventory_change_history1)
             session.add(inventory_change_history2)
 
